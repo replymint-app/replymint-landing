@@ -1,106 +1,396 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ReplyMint – Never Miss Sales Messages</title>
-
-  <!-- Tailwind CDN -->
+  <title>ReplyMint – Never Miss a Money DM Again</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="ReplyMint is a calm AI assistant that sits on top of your Instagram inbox so social sellers never miss revenue-generating DMs."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <meta name="description" content="ReplyMint helps Instagram & Facebook sellers focus only on messages that make money." />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#10B981",
+            primarySoft: "#ECFDF3",
+            ink: "#0F172A",
+          },
+          maxWidth: {
+            content: "56rem",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    }
+  </style>
 </head>
+<body class="bg-white text-ink antialiased">
+  <div class="min-h-screen flex flex-col">
+    <!-- HEADER -->
+    <header class="border-b border-slate-200 bg-white">
+      <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#" class="flex items-center gap-2">
+            <div
+              class="flex h-8 w-8 items-center justify-center rounded-xl bg-primarySoft text-primary text-xs font-semibold"
+            >
+              RM
+            </div>
+            <div class="flex flex-col">
+              <span class="text-sm font-semibold tracking-tight">
+                ReplyMint
+              </span>
+              <span class="text-[11px] text-slate-500">
+                DM assistant for social sellers
+              </span>
+            </div>
+          </a>
+          <span class="hidden text-[12px] text-slate-500 sm:inline">
+            Quietly in private beta · Join the waitlist
+          </span>
+        </div>
+      </div>
+    </header>
 
-<body class="bg-white text-gray-900">
-
-  <!-- HERO -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-      Never miss sales messages on Instagram & Facebook
-    </h1>
-    <p class="mt-6 text-lg text-gray-600 max-w-2xl">
-      ReplyMint helps sellers focus only on messages that matter — 
-      sales inquiries, not noise.
-    </p>
-    <a href="#signup" class="inline-block mt-8 bg-black text-white px-6 py-3 rounded-md">
-      Get early access
-    </a>
-  </section>
-
-  <!-- PROBLEM -->
-  <section class="bg-gray-50 py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-semibold">The problem</h2>
-      <ul class="mt-6 space-y-4 text-gray-700">
-        <li>• Sales comments and DMs get buried in noise</li>
-        <li>• You waste time replying to spam or low-intent messages</li>
-        <li>• Real buyers leave when replies are late</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SOLUTION -->
-  <section class="py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-semibold">The ReplyMint way</h2>
-      <ul class="mt-6 space-y-4 text-gray-700">
-        <li>• Detect sales-intent messages automatically</li>
-        <li>• Hide spam and low-value comments</li>
-        <li>• Show exactly what needs a reply — first</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="bg-gray-50 py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-semibold">How it works</h2>
-      <ol class="mt-6 space-y-4 text-gray-700">
-        <li>1. Connect your Instagram or Facebook account</li>
-        <li>2. See sales-intent messages in one focused inbox</li>
-        <li>3. Reply faster and close more deals</li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section class="py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-semibold">Simple pricing</h2>
-      <p class="mt-4 text-gray-600">$9 / month — one simple plan</p>
-    </div>
-  </section>
-
-  <!-- EARLY ACCESS FORM -->
-  <section id="signup" class="bg-black text-white py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-semibold">Get early access</h2>
-      <p class="mt-4 text-gray-300">
-        Join the early users shaping ReplyMint.
-      </p>
-
-      <!-- Replace action URL later -->
-      <form class="mt-8 max-w-md">
-        <input
-          type="email"
-          required
-          placeholder="Your email"
-          class="w-full px-4 py-3 rounded-md text-black"
-        />
-        <button
-          type="submit"
-          class="w-full mt-4 bg-white text-black px-4 py-3 rounded-md"
+    <main class="flex-1">
+      <!-- HERO -->
+      <section class="border-b border-slate-200 bg-white">
+        <div
+          class="mx-auto flex max-w-content flex-col gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 lg:flex-row lg:items-center"
         >
-          Join early access
-        </button>
-      </form>
-    </div>
-  </section>
+          <div class="flex-1">
+            <h1
+              class="text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-[2.5rem]"
+            >
+              Never miss a
+              <span class="text-primary">money DM</span>
+              again.
+            </h1>
+            <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+              ReplyMint sits quietly on top of your Instagram inbox and makes
+              sure every revenue‑generating message is seen, answered, and
+              remembered — without changing the way you already sell through
+              DMs.
+            </p>
 
-  <!-- FOOTER -->
-  <footer class="py-6 text-center text-sm text-gray-500">
-    © ReplyMint · Built for sellers
-  </footer>
+            <div class="mt-8 space-y-3">
+              <a
+                href="https://forms.gle/"
+                class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-emerald-600"
+              >
+                Join the waitlist
+              </a>
+              <p class="text-[12px] text-slate-500">
+                We’ll redirect you to a short Google Form to learn about your
+                business. No spam. Early access only.
+              </p>
+            </div>
 
+            <div class="mt-8 grid gap-3 text-[12px] text-slate-600 sm:text-xs">
+              <div class="flex items-center gap-2">
+                <span
+                  class="h-1.5 w-1.5 rounded-full bg-emerald-500"
+                  aria-hidden="true"
+                ></span>
+                <span>Built for Instagram‑first product and service sellers.</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span
+                  class="h-1.5 w-1.5 rounded-full bg-emerald-500"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  >Not a chatbot “taking over”. You stay in control of every
+                  reply.</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <span
+                  class="h-1.5 w-1.5 rounded-full bg-emerald-500"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  >Early users will be asked for Instagram business permissions
+                  so we can test safely with real traffic.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Calm visual hint (no dashboard noise) -->
+          <div class="flex-1 lg:max-w-md">
+            <div
+              class="rounded-2xl border border-slate-200 bg-slate-50/80 p-4 sm:p-5"
+            >
+              <div
+                class="flex items-center justify-between rounded-xl bg-white px-3 py-2"
+              >
+                <div class="flex items-center gap-2">
+                  <div
+                    class="h-7 w-7 rounded-full bg-gradient-to-tr from-orange-400 via-rose-400 to-amber-300"
+                  ></div>
+                  <div class="text-[11px] leading-tight">
+                    <p class="font-medium text-ink">New DM · Story reply</p>
+                    <p class="text-slate-500">@summer.market</p>
+                  </div>
+                </div>
+                <span
+                  class="rounded-full bg-primarySoft px-2 py-0.5 text-[11px] font-medium text-primary"
+                  >Sales intent</span
+                >
+              </div>
+
+              <div class="mt-4 space-y-3 text-[12px]">
+                <div class="rounded-xl bg-white p-3">
+                  <p class="font-medium text-ink">
+                    “Is the black set still available in size M? Can you ship to
+                    Dubai?”
+                  </p>
+                </div>
+
+                <div class="rounded-xl border border-dashed border-emerald-200 bg-primarySoft/60 p-3">
+                  <p class="text-[11px] font-medium uppercase tracking-wide text-emerald-700">
+                    ReplyMint suggestion
+                  </p>
+                  <p class="mt-2 text-[12px] text-ink">
+                    “Yes, we have the black set in size M and we ship to Dubai.
+                    Would you like me to send you a quick checkout link?”
+                  </p>
+                  <div class="mt-3 flex gap-2">
+                    <button
+                      class="inline-flex flex-1 items-center justify-center rounded-full bg-primary px-3 py-1.5 text-[11px] font-medium text-white hover:bg-emerald-600"
+                    >
+                      Insert reply
+                    </button>
+                    <button
+                      class="inline-flex flex-1 items-center justify-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[11px] text-slate-700 hover:border-slate-300"
+                    >
+                      Edit first
+                    </button>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between text-[11px]">
+                  <span class="text-slate-500">
+                    ReplyMint quietly highlights your money DMs.
+                  </span>
+                  <span class="text-slate-400">No flows. No scripts.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHO IT'S FOR -->
+      <section class="border-b border-slate-200 bg-slate-50/80">
+        <div class="mx-auto max-w-content px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+          <div class="mb-6">
+            <p class="text-xs font-medium tracking-wide text-slate-500">
+              WHO REPLYMINT IS FOR
+            </p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-3">
+            <div
+              class="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm"
+            >
+              <p class="font-medium text-ink">Instagram product sellers</p>
+              <p class="mt-1 text-[13px] text-slate-600">
+                Shops, resellers, thrift, small brands selling directly from
+                the grid and stories.
+              </p>
+            </div>
+            <div
+              class="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm"
+            >
+              <p class="font-medium text-ink">Service providers & coaches</p>
+              <p class="mt-1 text-[13px] text-slate-600">
+                Fitness, beauty, studios, and experts who close most
+                bookings in DMs.
+              </p>
+            </div>
+            <div
+              class="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm"
+            >
+              <p class="font-medium text-ink">Small social‑first teams</p>
+              <p class="mt-1 text-[13px] text-slate-600">
+                1–3 people sharing an inbox, trying not to drop any
+                conversations.
+              </p>
+            </div>
+          </div>
+
+          <p class="mt-4 text-[12px] text-slate-500">
+            If “sorry, just saw this” has ever cost you a sale, ReplyMint is
+            for you.
+          </p>
+        </div>
+      </section>
+
+      <!-- WHAT REPLYMINT ACTUALLY DOES -->
+      <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-content px-4 py-12 sm:px-6 lg:px-8">
+          <div class="max-w-xl">
+            <p class="text-xs font-medium tracking-wide text-slate-500">
+              WHAT IT ACTUALLY DOES
+            </p>
+            <h2
+              class="mt-3 text-xl font-semibold tracking-tight text-ink sm:text-2xl"
+            >
+              A quiet safety net for your revenue DMs.
+            </h2>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">
+              No dashboards to learn. No “flows” to build. ReplyMint works in
+              the background so you can keep talking like a human and still
+              feel confident nothing important is slipping away.
+            </p>
+          </div>
+
+          <div class="mt-8 grid gap-4 text-sm sm:grid-cols-3">
+            <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-4">
+              <p class="font-medium text-ink">Spots revenue‑intent DMs</p>
+              <p class="mt-2 text-[13px] text-slate-600">
+                Automatically highlights messages that look like they could
+                turn into an order, booking, or paying client.
+              </p>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-4">
+              <p class="font-medium text-ink">Surfaces them before everything else</p>
+              <p class="mt-2 text-[13px] text-slate-600">
+                You see those first — not the spam, not the “seen” emojis —
+                so your energy goes into conversations that matter.
+              </p>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-4">
+              <p class="font-medium text-ink">Keeps a gentle memory</p>
+              <p class="mt-2 text-[13px] text-slate-600">
+                Light customer context and a simple timeline help you pick up
+                any thread without asking “remind me who you are?”.
+              </p>
+            </div>
+          </div>
+
+          <p class="mt-5 text-[12px] text-slate-500">
+            There are no bots pretending to be you. ReplyMint suggests; you
+            decide what gets sent.
+          </p>
+        </div>
+      </section>
+
+      <!-- SETUP IN MINUTES -->
+      <section class="border-b border-slate-200 bg-slate-50/80">
+        <div class="mx-auto max-w-content px-4 py-12 sm:px-6 lg:px-8">
+          <div class="max-w-xl">
+            <p class="text-xs font-medium tracking-wide text-slate-500">
+              SETUP IN MINUTES
+            </p>
+            <h2
+              class="mt-3 text-xl font-semibold tracking-tight text-ink sm:text-2xl"
+            >
+              Keep using DMs. Add a safety net.
+            </h2>
+          </div>
+
+          <div class="mt-8 grid gap-4 text-sm sm:grid-cols-3">
+            <div class="rounded-xl border border-slate-200 bg-white p-4">
+              <p class="text-[11px] font-medium text-slate-500">Step 1</p>
+              <p class="mt-1 font-medium text-ink">Connect Instagram</p>
+              <p class="mt-2 text-[13px] text-slate-600">
+                Securely connect your Instagram business account so ReplyMint
+                can see your DMs and comments.
+              </p>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-white p-4">
+              <p class="text-[11px] font-medium text-slate-500">Step 2</p>
+              <p class="mt-1 font-medium text-ink">Teach your tone</p>
+              <p class="mt-2 text-[13px] text-slate-600">
+                Share a few typical replies and key details (shipping,
+                pricing, boundaries). MintSense learns how you speak.
+              </p>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-white p-4">
+              <p class="text-[11px] font-medium text-slate-500">Step 3</p>
+              <p class="mt-1 font-medium text-ink">Reply with confidence</p>
+              <p class="mt-2 text-[13px] text-slate-600">
+                From then on, revenue‑intent DMs are surfaced, suggested
+                replies appear when you need them, and you stay in control.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL WAITLIST CTA -->
+      <section class="bg-white">
+        <div class="mx-auto max-w-content px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+          <div class="max-w-xl">
+            <p class="text-xs font-medium tracking-wide text-slate-500">
+              EARLY ACCESS
+            </p>
+            <h2
+              class="mt-3 text-xl font-semibold tracking-tight text-ink sm:text-2xl"
+            >
+              We’re still building ReplyMint. Join the waitlist to shape it.
+            </h2>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">
+              In this early phase, we’re inviting a small number of Instagram
+              sellers and service providers to test ReplyMint with real
+              conversations. We may ask you for business permissions so we can
+              observe inbox patterns and improve how we catch your money DMs.
+            </p>
+          </div>
+
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a
+              href="https://forms.gle/"
+              class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-emerald-600"
+            >
+              Join the waitlist
+            </a>
+            <p class="text-[12px] text-slate-500">
+              You’ll be redirected to a short Google Form. We’ll only reach out
+              about ReplyMint — nothing else.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div
+        class="mx-auto flex max-w-content flex-col items-start justify-between gap-3 px-4 py-5 text-[12px] text-slate-500 sm:flex-row sm:px-6 lg:px-8"
+      >
+        <p>© <span id="year"></span> ReplyMint.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-slate-700">Privacy</a>
+          <a href="#" class="hover:text-slate-700">Terms</a>
+          <a href="mailto:hello@replymint.com" class="hover:text-slate-700"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
